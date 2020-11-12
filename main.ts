@@ -3,7 +3,7 @@ let dice_roll = 0
 input.onButtonPressed(Button.A, function () {
     hand = randint(1, 3)
     if (hand == 1) {
-        basic.pause(2000)
+        basic.pause(1500)
         basic.showLeds(`
             . # # # .
             # . . # .
@@ -13,7 +13,7 @@ input.onButtonPressed(Button.A, function () {
             `)
     }
     if (hand == 2) {
-        basic.pause(2000)
+        basic.pause(1500)
         basic.showLeds(`
             # # # # #
             # . . . .
@@ -23,7 +23,7 @@ input.onButtonPressed(Button.A, function () {
             `)
     }
     if (hand == 3) {
-        basic.pause(2000)
+        basic.pause(1500)
         basic.showLeds(`
             # # # # .
             # . . # .
@@ -41,19 +41,40 @@ input.onButtonPressed(Button.B, function () {
         # # # . #
         # . # . #
         `)
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < 5; index++) {
         music.playMelody("A G A G A B C5 A ", 206)
         music.playMelody("C5 B C5 B A G A C5 ", 206)
         music.playMelody("C5 B C5 B A F G A ", 206)
         music.playMelody("C5 B C5 B A F G A ", 206)
-        music.playMelody("G F G F E F G A ", 206)
-        music.playMelody("G E B F E G B F ", 206)
+        music.playMelody("G C5 G F C5 F C5 A ", 206)
+        music.playMelody("C5 G A C5 G A C5 F ", 206)
         music.playMelody("C5 B C5 B A F G A ", 206)
         music.playMelody("B C C5 B A F B C5 ", 206)
         music.playMelody("A B C5 B A E F G ", 206)
         music.playMelody("C5 B C5 B A F G A ", 206)
         music.playMelody("A G A G A B C5 A ", 206)
     }
+    basic.showLeds(`
+        # # . . .
+        # . # . .
+        # # . . .
+        # . # . .
+        # # . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        # . # . .
+        # . # . .
+        . # . . .
+        . # . . .
+        `)
+    basic.showLeds(`
+        # # # . .
+        # . . . .
+        # # # . .
+        # . . . .
+        # # # . .
+        `)
 })
 input.onGesture(Gesture.Shake, function () {
     dice_roll = randint(1, 20)
