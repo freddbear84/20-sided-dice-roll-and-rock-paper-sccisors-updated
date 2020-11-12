@@ -3,7 +3,7 @@ let dice_roll = 0
 input.onButtonPressed(Button.A, function () {
     hand = randint(1, 3)
     if (hand == 1) {
-        music.playMelody("A B E B E A F C5 ", 151)
+        basic.pause(2000)
         basic.showLeds(`
             . # # # .
             # . . # .
@@ -13,7 +13,7 @@ input.onButtonPressed(Button.A, function () {
             `)
     }
     if (hand == 2) {
-        music.playMelody("B G F A F A F A ", 151)
+        basic.pause(2000)
         basic.showLeds(`
             # # # # #
             # . . . .
@@ -23,7 +23,7 @@ input.onButtonPressed(Button.A, function () {
             `)
     }
     if (hand == 3) {
-        music.playMelody("A G A F A F A F ", 151)
+        basic.pause(2000)
         basic.showLeds(`
             # # # # .
             # . . # .
@@ -35,110 +35,25 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
-        # . . # .
-        # . . # .
-        # # # # .
-        # . . # .
-        # . . # .
-        `)
-    basic.showLeds(`
         . . . . .
-        . # . . .
+        . . . . #
         # . # . .
-        # # # . .
-        # . # . .
+        # # # . #
+        # . # . #
         `)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        # . # . .
-        # . # . .
-        . # . . .
-        `)
-    basic.showLeds(`
-        # # # . .
-        # . . . .
-        # # # . .
-        # . . . .
-        # # # . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . # . . .
-        # . # . .
-        # # # . .
-        # . # . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        # . . # .
-        # # . # .
-        # . # # .
-        # . . # .
-        `)
-    basic.showLeds(`
-        # . . . .
-        . . . . .
-        # . . . .
-        # . . . .
-        # . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        # # # . .
-        # . . . .
-        # . . . .
-        # # # . .
-        `)
-    basic.showLeds(`
-        # # # . .
-        # . . . .
-        # # # . .
-        # . . . .
-        # # # . .
-        `)
-    basic.showLeds(`
-        . . . # .
-        . . . # .
-        . # # # .
-        . # . # .
-        . # # # .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . # . .
-        . # . # .
-        . # # # .
-        . # . # .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . # . # .
-        . . # . .
-        . . # . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . . . .
-        . # . # .
-        . # # # .
-        `)
+    for (let index = 0; index < 3; index++) {
+        music.playMelody("A G A G A B C5 A ", 206)
+        music.playMelody("C5 B C5 B A G A C5 ", 206)
+        music.playMelody("C5 B C5 B A F G A ", 206)
+        music.playMelody("C5 B C5 B A F G A ", 206)
+        music.playMelody("G F G F E F G A ", 206)
+        music.playMelody("G E B F E G B F ", 206)
+        music.playMelody("C5 B C5 B A F G A ", 206)
+        music.playMelody("B C C5 B A F B C5 ", 206)
+        music.playMelody("A B C5 B A E F G ", 206)
+        music.playMelody("C5 B C5 B A F G A ", 206)
+        music.playMelody("A G A G A B C5 A ", 206)
+    }
 })
 input.onGesture(Gesture.Shake, function () {
     dice_roll = randint(1, 20)
